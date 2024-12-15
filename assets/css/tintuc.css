@@ -1,0 +1,146 @@
+.section_blog_container{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 130px 100px 50px 100px;
+}
+.section_blog_container h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+.blog_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 30px 0;
+    border-top: 1px solid rgb(126, 126, 126);
+}
+.blog_content_main{
+    display: grid;
+    grid-template-columns: repeat(2,4fr);
+    gap: 1rem;
+    flex-grow: 1.5;
+}
+.content_main_box{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border: 1px solid rgb(16, 145, 102);
+    border-radius: 10px;
+}
+.box_main_img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box_main_img:hover img{
+    transform: scale(1.1);
+    transition: 0.5s;
+    border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+.box_main_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px 15px;
+}
+.content_main_box h5{
+font-size: 16px;
+overflow: hidden;              /* Ẩn phần văn bản vượt quá */
+display: -webkit-box;          /* Sử dụng flexbox cho trình duyệt Webkit */
+-webkit-line-clamp: 3;         /* Giới hạn số dòng hiển thị tối đa là 3 dòng */
+-webkit-box-orient: vertical;  /* Định hướng chiều dọc */
+text-overflow: ellipsis; 
+}
+.content_main_box span{
+    font-size: 14px;
+    color: #626060;
+    font-weight: 600;
+}
+.content_main_box p {
+    font-size: 15px;               /* Kích thước chữ */             /* Khoảng cách giữa các dòng */
+    overflow: hidden;              /* Ẩn phần văn bản vượt quá */
+    display: -webkit-box;          /* Sử dụng flexbox cho trình duyệt Webkit */
+    -webkit-line-clamp: 3;         /* Giới hạn số dòng hiển thị tối đa là 3 dòng */
+    -webkit-box-orient: vertical;  /* Định hướng chiều dọc */
+    text-overflow: ellipsis;       /* Hiển thị dấu "..." */
+}
+
+.blog_content_small{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    padding: 30px 20px;
+    border:0.5px solid rgb(126, 126, 126);
+
+}
+.blog_content_small h5{
+    font-size: 20px;
+}
+.blog_small_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.blog_small_box p{
+    font-size: 12px;
+    overflow: hidden;              /* Ẩn phần văn bản vượt quá */
+    display: -webkit-box;          /* Sử dụng flexbox cho trình duyệt Webkit */
+    -webkit-line-clamp: 4;         /* Giới hạn số dòng hiển thị tối đa là 3 dòng */
+    -webkit-box-orient: vertical;  /* Định hướng chiều dọc */
+text-overflow: ellipsis;
+}
+.blog_small_box span{
+    font-size: 12px;
+    color: #626060;
+}
+.blog_content_small_list{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 520px;
+}
+
+@media(max-width: 985px){
+    .blog_content_main {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        flex-grow: 1.5;
+    }
+    .blog_content {
+        display: flex;
+        align-items: start;
+    }
+}
+@media(max-width: 768px){
+    .blog_content {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+ 
+}
+@media(max-width: 500px){
+    .section_blog_container{
+        padding: 130px 30px 100px 30px;
+    }
+}

@@ -1,0 +1,96 @@
+
+.admin_product_container,.admin_user_container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Chiều rộng tối đa cho container */
+    margin: auto; 
+  
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+button {
+    margin: 10px 0;
+}
+
+#admin-productForm,#admin-userForm {
+    display: none;
+    background: #f9f9f9; /* Màu nền cho form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Đảm bảo các trường chiếm toàn bộ chiều rộng */
+    margin-bottom: 10px; /* Khoảng cách giữa các trường */
+}
+
+form button {
+    width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.admin_product_table_container,.admin_user_table_container {
+    max-height: 400px; /* Chiều cao tối đa cho bảng */
+    overflow-y: auto; /* Hiệu ứng cuộn dọc */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.admin-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.admin-actions button:hover {
+    color: #007bff;
+}

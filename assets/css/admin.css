@@ -1,0 +1,280 @@
+:root {
+    --blue:#2a2185;
+    --white:#fff;
+    --gray:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.admin_container{
+    position: relative;
+    width: 100%;
+}
+.admin_navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.admin_navigation.active ul li a .admin_title {
+    display: none; /* Ẩn văn bản khi menu ở trạng thái active */
+}
+.admin_navigation.active ul li a .admin_icon {
+    padding: 0px 10px ; 
+    height: 60px;/* Ẩn văn bản khi menu ở trạng thái active */
+}
+.admin_navigation.active ul li a .admin_icon ion-icon  {
+    margin-top: 13px;
+}
+.admin_navigation.active{
+    width: 80px;
+}
+.admin_navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.admin_navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+.admin_navigation ul li:hover,
+.admin_navigation ul li.hovered{
+    background-color: var(--white);
+}
+.admin_navigation ul li:nth-child(1){
+    
+   
+}
+.admin_navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    
+}
+.admin_navigation ul li:hover a,
+.admin_navigation ul li.hovered a{
+    color: var(--blue);
+}
+.admin_navigation ul li a .admin_icon{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 45px;
+    line-height: 60px;
+    text-align: center;
+}
+.admin_navigation ul li a .admin_icon ion-icon{
+    font-size: 2rem;
+    
+}
+.admin_navigation ul li a .admin_title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.admin_navigation ul li:hover a::before,
+.admin_navigation ul li.hovered a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px 35px 0 10px var(--white);
+}
+.admin_navigation ul li:hover a::after,
+.admin_navigation ul li.hovered a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/* ========main============= */
+.admin_main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    background: var(--white);
+    min-height: 100vh;
+    transition: 0.5s;
+}
+.admin_main.active{
+  width: calc(100% - 80px);
+  left: 80px;
+}
+.admin_topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.admin_toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.admin_search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.admin_search label{
+    position: relative;
+    width: 100%;
+}
+.admin_search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid var(--black1);
+}
+.admin_search label ion-icon{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+}
+.admin_user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.admin_user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin_cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.admin_cardBox .admin_card{
+    position: relative;
+    background:var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.admin_cardBox .admin_card .admin_numbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--blue);
+}
+.admin_cardBox .admin_card .admin_cardName{
+    color: var(--black2);
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.admin_cardBox .admin_card .admin_iconBx{
+    font-size: 3rem;
+    color: var(--black2);
+}
+.admin_cardBox .admin_card:hover{
+    background: var(--blue);
+}
+.admin_cardBox .admin_card:hover .admin_numbers,
+.admin_cardBox .admin_card:hover .admin_cardName,
+.admin_cardBox .admin_card:hover .admin_iconBx{
+    color: var(--white);
+}
+
+/* ============responsive=========== */
+@media(max-width:991px){
+    .admin_navigation{
+        left: -300px;
+    }
+    .admin_navigation.active{
+        width: 300px;
+        left: 0;
+    }
+    .admin_navigation.active ul li a .admin_title {
+        display: block; /* Ẩn văn bản khi menu ở trạng thái active */
+    }
+    .admin_main{
+        width: 100%;
+        left: 0;
+    }
+    .admin_main.active{
+        left: 300px;
+    }
+    .admin_cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:480px){
+    .admin_cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .admin_user{
+        min-width: 40px;
+    }
+    .admin_navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .admin_toggle{
+        z-index: 10001;
+    }
+    .admin_main.active .admin_toggle{
+        color: #fff;
+        position: fixed;
+        right: 0;
+    }
+
+}

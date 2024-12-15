@@ -1,0 +1,84 @@
+.related-products{
+    padding: 20px 100px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    font-size: 1px;
+    padding: 10px 20px;
+    background-color: rgb(192, 187, 187);
+}
+
+
+/* Responsive Styles */
+input[type="file"],
+textarea {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm tăng chiều rộng tổng */
+}
+
+textarea {
+    min-height: 100px; /* Chiều cao tối thiểu cho textarea */
+    resize: vertical; /* Cho phép thay đổi chiều cao */
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Viền cho textarea */
+    border-radius: 4px; /* Bo góc */
+}
+
+input[type="file"] {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Viền cho input file */
+    border-radius: 4px; /* Bo góc */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    textarea {
+        min-height: 80px; /* Giảm chiều cao tối thiểu cho màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    textarea {
+        min-height: 60px; /* Giảm chiều cao tối thiểu cho màn hình rất nhỏ */
+    }
+}
+
+
+
+@media (max-width:1125px) {
+    .section_p1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #MainImg{
+        width: 97.8%;
+    }
+    
+}
+@media (max-width:600px){
+    .select_container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .form_judge .star_judge {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+    }
+    
+        #comment {
+            width: 200px;
+            height: 50px;
+        }
+        #prodetails {
+            padding: 130px 30px 100px 30px;
+        }
+        .product_details_content{
+            padding: 30px;
+        }
+}

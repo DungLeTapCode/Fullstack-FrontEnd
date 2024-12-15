@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+a{
+    text-decoration: none;
+}
+.section_cart{
+    padding: 100px 100px;
+    overflow-x: auto;
+}
+.section_cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+.section_cart table img{
+    width: 70px;
+}
+.section_cart table td:nth-child(1){
+ width: 100px;
+ text-align: center;
+}
+.section_cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+   }
+.section_cart table td:nth-child(3) {
+    width: 250px; /* Chiều rộng cố định */
+    text-align: center; /* Căn giữa nội dung */
+    overflow: hidden; /* Ẩn phần nội dung tràn ra ngoài */
+    white-space: nowrap; /* Không cho xuống dòng */
+    text-overflow: ellipsis; /* Hiển thị "..." khi nội dung dài */
+}
+
+.section_cart table td:nth-child(4),
+.section_cart table td:nth-child(5),
+.section_cart table td:nth-child(6)
+{
+    width: 150px;
+    text-align: center;
+   }
+.section_cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+.section_cart thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+.section_cart table thead tr td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+.section_cart table tbody tr td{
+    padding-top: 15px;
+}
+.section_cart table tbody td{
+    font-size: 13px;
+}
+.cart-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+.coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+.coupon h3{
+    padding-bottom: 15px;
+}
+.coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+.coupon button{
+    background-color: #088178;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;  
+}
+.subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+.subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+.subtotal h3{
+    padding-bottom: 15px ;
+}
+.subtotal button{
+    padding: 7px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background-color: #088178;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.subtotal button:hover,.coupon button:hover{
+    background-color: #045c56;
+}
+#bar{
+  cursor: pointer;
+}
+#text{
+    width: 808px;
+    height: 200px;
+    resize: none;
+}
+@media (max-width: 600px){
+    .cart-add{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+       align-items: center;
+        padding: 50px 30px;
+    }
+    .subtotal {
+        width: 200px;
+        padding: 10px;
+    }
+    .coupon input {
+        width: 200px;
+    }
+    .coupon h3{
+        width: 200px;
+    }
+    .coupon button{
+        font-size: 13px;
+    }
+    .section_cart {
+        padding: 100px 30px;
+    }
+   
+}
+@media (max-width: 460px)
+{
+    .cart-add{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .coupon{
+        margin-right: 30px;
+    }
+}

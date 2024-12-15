@@ -1,0 +1,146 @@
+.contact_container{
+    padding:100px 100px 50px 100px;
+     display: flex; 
+     align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    gap: 1rem;
+ }
+ .contact_map{
+    width: 100%;
+ }
+ .contact_content_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 5rem;
+    padding: 50px 0;
+    
+ }
+ .contact_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1.5rem;
+ }
+ .contact_icon{
+    padding: 10px 10px;
+    background-color: rgb(40, 39, 39);
+    margin-bottom: 50px;
+ }
+ .contact_icon i{
+    font-size: 25px;
+    color: #ffffff;
+ }
+ .contact_section{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+ }
+ .contact_section h5{
+    font-size: 20px;
+ }
+ .contact_section p{
+    font-size: 18px;
+ }
+ .contact_section :nth-child(1){
+    width: 200px;
+ }
+
+ .contact_input_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+ }
+ .contact_input_text_list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+ }
+ .contact_input_text_list input{
+    font-size: 18px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(241,241,241);
+    border: 1px solid rgb(241,241,241);
+    padding: 10px 10px;
+ }
+ .contact_input_container button{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: rgb(40, 39, 39);
+    border: 0;
+    padding: 10px 230px;
+    cursor: pointer;
+ }
+ .contact_input_container button:hover{
+    background-color: rgb(40, 39, 39);
+ }
+ #text {
+    width: 810px; /* Chiều dài 810px */
+    height: 250px; /* Chiều cao 250px */
+    resize: none; /* Không cho phép thay đổi kích thước */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 4px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+@media (max-width: 1028px) {
+.contact_content_list{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+.contact_input_text_list{
+   display: grid;
+   grid-template-columns: repeat(1,4fr);
+}
+
+.contact_input_container{
+   display: flex;
+   flex-wrap: wrap;
+}
+.contact_input_container button{
+   padding: 10px 50px;
+}
+#text{
+   width: 400px;
+   height: 100px;
+}
+.contact_map {
+   width: 120%;
+}
+}
+@media (max-width: 500px){
+   .contact_input_text_list input{
+      font-size: 14px;
+    width: 300px;
+    height: 30px;
+   }
+   #text{
+      width: 300px;
+      height: 75px;
+   }
+   .contact_section h5{
+      font-size: 15px;
+   }
+   .contact_section p{
+      font-size: 12px;
+   }
+   .contact_map {
+      width: 100%;
+  }
+  .contact_container{
+   padding: 100px 30px;
+  }
+}
