@@ -248,7 +248,7 @@ const submitProductForm = async () => {
   try {
     // Sử dụng axios với header multipart/form-data
     const response = await axios.post(
-      "https://fullstack-backend-2-kr3d.onrender.com/api/products/AddNewProduct",
+      "https://fullstack-backend-kiy9.onrender.com/api/products/AddNewProduct",
       formData,
       {
         headers: {
@@ -317,7 +317,7 @@ const confirmEditProduct = async () => {
 
   try {
     const response = await axios.put(
-      `https://fullstack-backend-2-kr3d.onrender.com/api/products/UpdateProducts/${editedProduct.value.id}`,
+      `https://fullstack-backend-kiy9.onrender.com/api/products/UpdateProducts/${editedProduct.value.id}`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -347,7 +347,7 @@ const removeProduct = async (productId) => {
   try {
     // Gửi yêu cầu xóa sản phẩm tới API
     const response = await axios.delete(
-      `https://fullstack-backend-2-kr3d.onrender.com/api/products/DeleteProducts/${productId}`
+      `https://fullstack-backend-kiy9.onrender.com/api/products/DeleteProducts/${productId}`
     );
     console.log("Sản phẩm đã được xóa:", response.data);
 

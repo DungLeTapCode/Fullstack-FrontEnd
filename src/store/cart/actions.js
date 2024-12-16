@@ -43,7 +43,7 @@ export default {
             return;
           }
           
-          const response = await axios.get(`https://fullstack-backend-2-kr3d.onrender.com/api/CartItem/GetCarts/${cartId}`);
+          const response = await axios.get(`https://fullstack-backend-kiy9.onrender.com/api/CartItem/GetCarts/${cartId}`);
           localStorage.setItem('cartItem', JSON.stringify(response.data));
           commit('SET_CART_ITEMS', response.data); // Lưu dữ liệu vào state
         } catch (error) {
