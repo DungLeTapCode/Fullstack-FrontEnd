@@ -122,7 +122,7 @@ const addBlog = async () => {
   }
 
   try {
-    const response = await axios.post('https://localhost:7075/api/Blogs/AddNewBlog', formData, {
+    const response = await axios.post('https://fullstack-backend-2-kr3d.onrender.com/api/Blogs/AddNewBlog', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       }
@@ -179,7 +179,7 @@ const updateBlog = async () => {
   }
 
   try {
-    await axios.put(`https://localhost:7075/api/Blogs/UpdateBlog/${parseInt(editBlog.value.id)}`, formData, {
+    await axios.put(`https://fullstack-backend-2-kr3d.onrender.com/api/Blogs/UpdateBlog/${parseInt(editBlog.value.id)}`, formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     });
     store.dispatch('blog/fetchBlogs') // Lấy lại danh sách blog sau khi cập nhật
@@ -194,7 +194,7 @@ const deleteBlog = async (id) => {
 
   if (isConfirmed) {
     try {
-      await axios.delete(`https://localhost:7075/api/Blogs/DeleteBlog/${id}`);
+      await axios.delete(`https://fullstack-backend-2-kr3d.onrender.com/api/Blogs/DeleteBlog/${id}`);
       store.dispatch('blog/fetchBlogs'); // Lấy lại danh sách blog sau khi xóa
     } catch (error) {
       console.error('Error deleting blog:', error);

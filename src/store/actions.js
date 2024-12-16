@@ -71,7 +71,7 @@ export default {
 
   async fetchProducts({ commit }) {
     try {
-      const response = await axios.get('https://localhost:7075/api/products/GetAllProduct');
+      const response = await axios.get('https://fullstack-backend-2-kr3d.onrender.com/api/products/GetAllProduct');
       
       // Lưu vào Vuex state
       commit('setProducts', response.data);
